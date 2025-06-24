@@ -1,0 +1,22 @@
+name: Deploy to GitHub Pages
+on:
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: read    # to checkout your repo
+  pages: write      # to create/update the Pages deployment
+  id-token: write   # for OIDC auth
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      # (optional) run your build here, if you have one
+
+      - name: Deploy to Pages
+        uses: actions/deploy-pages@v4
+        with:
+          publish-dir: .   # the root of your repo, where index.html lives
