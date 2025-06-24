@@ -1,0 +1,66 @@
+<!--
+File: index.html
+GUI Assignment: Multiplication table generator
+Kevin Kuang, UMass Lowell Computer Science, kevin_kuang@student.uml.edu
+Copyright (c) 2025 by Kuang. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by KK on June 12, 2025 at 4:28 PM
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Multiplication Table Generator</title>
+  <link
+    rel="stylesheet"
+    href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css"
+  >
+  <link rel="stylesheet" href="css/styles.css">
+
+</head>
+<body>
+  <h1>Multiplication Table Generator</h1>
+  <div id="tabs">
+    <ul id="tab-list">
+      <li><a href="#tab-entry">Entry</a></li>
+</ul>
+
+<div id="tab-entry">
+    <form id="tableForm">
+      <label for="hStart">Horizontal Start:</label>
+      <input type="number" id="hStart" name="hStart" required>
+      <div id="sliderHStart"></div>
+
+        <label for="hEnd">Horizontal End:</label>
+        <input type="number" id="hEnd" name="hEnd" required>
+        <div id="sliderHEnd"></div>
+
+        <label for="vStart">Vertical Start:</label>
+        <input type="number" id="vStart" name="vStart" required>
+        <div id="sliderVStart"></div>
+
+        <label for="vEnd">Vertical End:</label>
+        <input type="number" id="vEnd" name="vEnd" required>
+        <div id="sliderVEnd"></div><br>
+
+        <button type="submit">Generate Table</button>
+        <button type="button" id="clearTabsBtn" style="margin-left:8px; background:#d9534f; color:#fff;">
+          Clear All Tabs
+        </button>
+      </form>
+
+      <div id="entryTable" class="scroll-container"></div>
+    </div>
+  </div>
+
+
+
+
+  <!-- DEPENDENCIES -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/jquery.validation/1.19.3/jquery.validate.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

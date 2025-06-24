@@ -1,0 +1,121 @@
+/* 
+File: styles.css
+GUI Assignment: layout and visual styling for the table web app itself. row colors, readability, sticky postioning to make sure headers remain visble etc.
+Kevin Kuang, UMass Lowell Computer Science, kevin_kuang@student.uml.edu
+Copyright (c) 2025 by Kuang. All rights reserved. May be freely copied or
+excerpted for educational purposes with credit to the author.
+updated by KK on June 12, 2025 at 4:28 PM
+*/
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+#tabs{
+  margin-top: 1em;
+}#tabs .ui-tabs-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 4px;
+  border-bottom: 1px solid #ccc;
+}#tabs .ui-tabs-nav li {
+  display: inline-block;
+  position: relative;
+  margin-right: 4px;
+}
+
+#tabs .ui-tabs-nav li a {
+  display: block;
+  padding: 6px 12px;
+  text-decoration: none;
+  background: #f1f1f1;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  color: #333;
+}
+
+#tabs .ui-tabs-nav .ui-tabs-active a{
+  background: #fff;
+  font-weight: bold;
+  border-bottom-color: transparent;
+}
+
+#tabs .ui-tabs-nav li .ui-icon-close{
+  position: absolute;
+  top: 50%;
+  right: 2px;
+  margin-top: -8px;
+  cursor: pointer;
+}
+
+.ui-tabs-panel{
+  border: 1px solid #ccc;
+  background: #fff;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+#tableForm{
+  max-width: 300px;
+  margin-bottom: 16px;
+}
+
+#tableForm label{
+  display: block;
+  margin: 12px 0 4px;
+  font-weight: bold;
+}
+
+#tableForm input[type=number]{
+  width: 100%;
+  box-sizing: border-box;
+  padding: 4px;
+}
+
+#tableForm .ui-slider{
+  margin: 4px 0 12px;
+}
+
+#tableForm button{
+  padding: 6px 12px;
+  margin-right: 8px;
+  font-size: 1em;
+  cursor: pointer;
+}
+#clearTabsBtn{
+  background: #d9534f;
+  color: #fff;
+  border: none;
+}
+.scroll-container{
+  max-height: 400px;
+  overflow: auto;
+  margin-top: 1em;
+}
+
+table{
+  border-collapse: collapse;
+  width: 100%;
+}
+
+th, td{
+  border: 1px solid #666;
+  padding: 4px 8px;
+  text-align: center;
+}
+th{
+  background: #eee;
+  position: sticky;
+  top: 0;
+  z-index: 2;
+}
+
+thead th:first-child,
+tbody th:first-child {
+  position: sticky;
+  left: 0;
+  background: #eee;
+  z-index: 3;
+}
